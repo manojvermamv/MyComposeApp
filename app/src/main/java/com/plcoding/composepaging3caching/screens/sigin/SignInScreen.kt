@@ -112,6 +112,17 @@ fun SignInScreen(
                     roundedCorerShape = RoundedCornerShape(topStart = 30.dp, bottomEnd = 30.dp),
                     onClick = {
                         //navController.navigate("main")
+                        // Validate email format
+                        /*if (!isValidEmail(emailState.value)) {
+                            showError("Invalid email format")
+                            return@onClick
+                        }
+
+                        // Validate password strength
+                        if (!isPasswordStrongEnough(passwordState.value)) {
+                            showError("Password must be at least 8 characters with a mix of uppercase, lowercase, numbers, and symbols")
+                            return@onClick
+                        }*/
                         viewModel.signIn(email, password)
                     }
                 )
